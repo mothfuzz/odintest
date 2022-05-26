@@ -5,8 +5,6 @@ import "../../lib/scene"
 import "../../actors/test_sprite"
 import "../../actors/camera2d"
 
-import "vendor:glfw"
-
 stress :: proc() -> scene.Scene {
 	s := scene.create()
 
