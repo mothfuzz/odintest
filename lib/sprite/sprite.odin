@@ -6,7 +6,6 @@ import "core:strings"
 import "core:image"
 import "core:image/png"
 import "core:fmt"
-import "core:math/linalg/glsl"
 import "../transform"
 
 //sort sprites into batches based on a single texture
@@ -70,7 +69,7 @@ create_renderer :: proc() -> SpriteRenderer {
 
 	s.positions_attrib = 0
 	s.texcoords_attrib = 1
-	s.models_attrib       = 2
+	s.models_attrib    = 2
 
 	positions: [4*3]f32 = {
 		-0.5, -0.5, 0,
@@ -196,8 +195,7 @@ create :: proc(sr: ^SpriteRenderer, texture: string) -> ^Sprite {
 		create_batch(sr, texture)
 	}
 	s: ^Batch = sr.texture_map[texture]
-	origin := (matrix[4, 4]f32)(glsl.identity(glsl.mat4))
-	append(&s.models, origin)
+	append(&s.models, (matrix[4, 4]f32){1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1})
 	handle := new(Sprite)
 	handle.batch = s
 	handle.index = len(s.handles)
