@@ -1,0 +1,5 @@
+ols.json
+*.bin
+*.exe
+*.sublime-project
+*.sublime-workspace

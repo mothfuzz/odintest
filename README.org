@@ -1,0 +1,7 @@
+#+title: odin test
+
+small 2d demo framework / engine in Odin
+
+- very fast batched & instanced sprite renderer
+- spatially hashed bounding box collision detection
+- actor/scene system with message passing

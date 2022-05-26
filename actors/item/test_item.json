@@ -1,0 +1,22 @@
+[
+
+    {
+        "name": "Test Item",
+        "description": "Here's an item! It's cool!",
+        "icon": "bunny.png",
+        "damage": 10.0
+    },
+    {
+        "name": "Test Item 2",
+        "description": "Here's another item! It's also cool!",
+        "icon": "bunny.png",
+        "damage": 15.0
+    },
+    {
+        "name": "Test Item 3",
+        "description": "Wow! There are so many items!",
+        "icon": "bunny.png",
+        "damage": 30.0
+    },
+
+]
